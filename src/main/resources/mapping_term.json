@@ -1,0 +1,38 @@
+{
+  "properties": {
+ 	"orgstr": {
+      "type": "keyword"
+    },
+     "orgreg": {
+      "type": "keyword"
+    },
+    "docLan": {
+      "type": "integer"
+    },
+    "scid": {
+      "type": "integer"
+    },
+    "org1": {
+      "type": "keyword"
+    },
+    "org2": {
+      "type": "keyword"
+    },
+    "address": {
+      "properties": {
+        "province": {
+          "type": "keyword"
+        },
+        "city": {
+          "type": "keyword"
+        },
+		"postcode": {
+          "type": "keyword"
+        }
+      }
+    },
+    "author": {
+      "type": "keyword"
+    }
+  }
+}
