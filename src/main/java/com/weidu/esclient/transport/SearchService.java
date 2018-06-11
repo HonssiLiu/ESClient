@@ -41,7 +41,7 @@ public class SearchService {
 		// System.out.println(builder.toString());
 		SearchResponse searchResponse = builder.execute().actionGet();
 		totalHits = searchResponse.getHits().getTotalHits();
-		System.out.println("共查询出%d条数据" + totalHits);
+		//System.out.println("共查询出%d条数据" + totalHits);
 		SearchHits hits = searchResponse.getHits();
 		for (SearchHit hit : hits) {
 			Map<String, Object> sourceAsMap = hit.getSourceAsMap();
@@ -63,7 +63,7 @@ public class SearchService {
 		// System.out.println(builder.toString());
 		SearchResponse searchResponse = builder.execute().actionGet();
 		totalHits = searchResponse.getHits().getTotalHits();
-		System.out.println("共查询出%d条数据" + totalHits);
+		//System.out.println("共查询出%d条数据" + totalHits);
 		SearchHits hits = searchResponse.getHits();
 		for (SearchHit hit : hits) {
 			String sourceAsString = hit.getSourceAsString();
@@ -84,7 +84,7 @@ public class SearchService {
 		// System.out.println(builder.toString());
 		SearchResponse searchResponse = builder.get();
 		totalHits = searchResponse.getHits().getTotalHits();
-		System.out.println("共查询出%d条数据" + totalHits);
+		//System.out.println("共查询出%d条数据" + totalHits);
 		return new BulkInterator(searchResponse);
 	}
 
